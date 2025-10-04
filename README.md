@@ -74,6 +74,8 @@ The final model was trained end-to-end after incorporating all insights from pre
 - Heavy regularization made the model struggle on training data.  
 - However, since test data has no augmentations, the gap shows improved **generalization** despite lower train accuracy.  
 
+<img width="1800" height="750" alt="plot1" src="https://github.com/user-attachments/assets/9db66e68-422f-44d8-8021-f86b4d78000a" />
+
 ---
 
 ## Scaling Depth
@@ -88,7 +90,9 @@ Keeping other parameters same, depth was varied:
 
 **Insights:**  
 - Accuracy increases slightly with depth but shows **diminishing returns**.  
-- Likely limited by choice of learning rate and insufficient training.  
+- Likely limited by choice of learning rate and insufficient training.
+- 
+<img width="1800" height="750" alt="plot2" src="https://github.com/user-attachments/assets/d9d7ed62-45ab-41f0-a00d-928163d43b17" />
 
 ---
 
@@ -110,7 +114,9 @@ Keeping other parameters same, depth was varied:
 
 **Decision:**  
 - Chose **6e-4** as optimal learning rate.  
-- `1e-3` was unstable, causing noisy training curves.  
+- `1e-3` was unstable, causing noisy training curves.
+
+<img width="1800" height="750" alt="plot3" src="https://github.com/user-attachments/assets/f33a707e-6dbb-43c5-ae0d-80322343e6e4" />
 
 ---
 
@@ -119,7 +125,9 @@ Keeping other parameters same, depth was varied:
 - Applied **Shifted Patch Tokenization (SPT)** for overlapping patches.  
 - Other hyperparameters same as before.  
 
-**Result:** `79.12%` accuracy.  
+**Result:** `79.12%` accuracy.
+
+<img width="1800" height="750" alt="plot4" src="https://github.com/user-attachments/assets/2cf11afa-e0b7-49f2-98d1-a7ed69b0cd61" />
 
 ---
 
@@ -174,5 +182,5 @@ The repository also includes a notebook demonstrating **text-driven segmentation
 
 - Video processing length and resolution are **limited by available VRAM**.  
 - Longer or higher-resolution videos require more GPU memory and may not run on constrained hardware.  
-
+- Currently, for videos it cannot track object if they were not present in the first frame, this can be tackled by adding seed in later frames to detect such objects.
 ---
