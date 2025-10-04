@@ -1,6 +1,6 @@
 # AIRL-Assignment
 
-# Vision Transformer on CIFAR-10 (PyTorch)
+# Q1: Vision Transformer on CIFAR-10 (PyTorch)
 This report summarizes experiments on training a Vision Transformer (ViT) model from scratch on the CIFAR-10 dataset. All accuracies reported are **best accuracies achieved on the full test set (10k examples)**.
 
 ---
@@ -116,7 +116,7 @@ Since SPT improved accuracy, it was kept for further experiments. Feature dimens
 
 ---
 
-# Text-Driven Image Segmentation with SAM 2
+# Q2: Text-Driven Image Segmentation with SAM 2
 
 The repository also includes a notebook demonstrating **text-driven segmentation** using **Segment Anything Model 2 (SAM 2.1)**.
 
