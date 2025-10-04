@@ -3,6 +3,7 @@
 # Q1: Vision Transformer on CIFAR-10 (PyTorch)
 This report summarizes experiments on training a Vision Transformer (ViT) model from scratch on the CIFAR-10 dataset. All accuracies reported are **best accuracies achieved on the full test set (10k examples)**.
 
+[Click Here for Best Model configuration](# final-model-results)
 ---
 
 ## General Settings
@@ -114,7 +115,9 @@ Since SPT improved accuracy, it was kept for further experiments. Feature dimens
 5. **Shifted Patch Tokenization (SPT)** boosted accuracy further to `79.12%`.  
 6. **Feature dimension scaling with SPT** led to a maximum of `87%` at `768` dimensions.  
 
-## Final Model Notebook
+---
+
+## Final Model Results
 
 The final model was trained end-to-end after incorporating all insights from previous experiments.  
 
