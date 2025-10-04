@@ -114,6 +114,42 @@ Since SPT improved accuracy, it was kept for further experiments. Feature dimens
 5. **Shifted Patch Tokenization (SPT)** boosted accuracy further to `79.12%`.  
 6. **Feature dimension scaling with SPT** led to a maximum of `87%` at `768` dimensions.  
 
+## Final Model Notebook
+
+The final model was trained end-to-end after incorporating all insights from previous experiments.  
+
+### Final Configuration
+
+- **Image size:** 32 × 32  
+- **Patch size:** 4  
+- **Number of classes:** 10  
+- **Feature dimension:** 768  
+- **MLP dimension:** 1536 (2 × feature_dim)  
+- **Depth (layers):** 12  
+- **Attention heads:** 4  
+- **Dropout:** 0.3  
+- **Embedding dropout:** 0.3  
+
+**Optimizer:** AdamW  
+- Learning rate: 6e-4  
+- Betas: (0.9, 0.999)  
+- Epsilon: 1e-8  
+- Weight decay: 0.3  
+
+**Loss function:** Cross-Entropy Loss  
+
+**Training setup:**  
+- Total epochs: 200  
+- Warmup: 30 epochs (linear schedule)  
+- Learning rate scheduler: Linear warmup → Cosine annealing (min lr = 1e-6)  
+
+**Logger:** SimpleLogger (for tracking experiments)  
+
+### Final Results
+
+- **Test Accuracy:** **88%** on CIFAR-10  
+- This represents the best-performing model in all experiments
+
 ---
 
 # Q2: Text-Driven Image Segmentation with SAM 2
