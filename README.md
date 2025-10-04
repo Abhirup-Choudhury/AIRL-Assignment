@@ -139,7 +139,7 @@ Since SPT improved accuracy, it was kept for further experiments. Feature dimens
 |---------------------|-----------|
 | 384                 | 82.0%     |
 | 512                 | 86.0%     |
-| 768                 | 87.0%     |
+| 768                 | 89.0%     |
 
 **Decision:**  
 - Adopted **768 feature dimensions** as the best-performing configuration.  
