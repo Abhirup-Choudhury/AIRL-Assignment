@@ -32,7 +32,7 @@ The final model was trained end-to-end after incorporating all insights from pre
 - Warmup: 30 epochs (linear schedule)  
 - Learning rate scheduler: Linear warmup → Cosine annealing (min lr = 1e-6)  
 
-**Test Accuracy:** **91%** on CIFAR-10  
+**Test Accuracy:** **90.93%** on CIFAR-10  
 
 ---
 
@@ -137,12 +137,14 @@ Since SPT improved accuracy, it was kept for further experiments. Feature dimens
 
 | Feature Dimensions | Accuracy |
 |---------------------|-----------|
-| 384                 | 82.0%     |
-| 512                 | 86.0%     |
-| 768                 | 89.0%     |
+| 384                 | 82.38%     |
+| 512                 | 85.84%     |
+| 768                 | 88.79%     |
 
 **Decision:**  
-- Adopted **768 feature dimensions** as the best-performing configuration.  
+- Adopted **768 feature dimensions** as the best-performing configuration.
+  
+<img width="1800" height="750" alt="plot5" src="https://github.com/user-attachments/assets/82015ec3-d927-4237-9aa2-ab93976e1eca" />
 
 ---
 
